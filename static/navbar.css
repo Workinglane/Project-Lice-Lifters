@@ -1,0 +1,56 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1440px;
+    height: 106px;
+    flex-shrink: 0;
+    background: rgba(41, 147, 254, 0.40);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.navbar * {
+    display: flex;
+    color: #000;
+    font-family: "Delval Galanogrotesque", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: blue;
+}
+
+.navbar img {
+    display: flex;
+    width: 240px;
+    height: 52px;
+    margin-left: 120px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .navbar * {
+        padding-bottom: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .navbar img {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+}

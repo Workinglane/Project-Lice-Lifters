@@ -1,0 +1,12 @@
+USE EasyBook;
+
+CREATE TABLE USERS (
+    user_id INT AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    permission VARCHAR(50) NOT NULL,
+    
+    constraint users_pk PRIMARY KEY (user_id),
+    constraint check_permission CHECK (permission IN ('customer', 'employee', 'admin'))
+);

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="static/infobar.css">
+        <link rel="stylesheet" href="static/navbar.css">
+        <link rel="stylesheet" href="static/footer.css">
+    </head>
+    <body>
+        {% include 'infobar.html' %}
+        {% include 'navbar.html' %}
+
+        <!--Main Content-->
+        {% block content %} 
+        {% endblock %}
+        <!--End of Main Content--> 
+
+        {% include 'footer.html' %}
+
+    </body>
+</html>
